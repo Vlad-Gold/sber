@@ -1,0 +1,14 @@
+.oddCard {
+    color: rgb(255, 38, 0);
+    background: #6e657dc4;
+}
+
+.evenCard {
+    color: rgb(255, 38, 0);
+    background: #878787c4;
+}
+
+.fontView {
+    font-weight: bold;
+    color: black;
+  }
