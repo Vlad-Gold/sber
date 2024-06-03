@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+Создать компонент VAutocomplete, на основе MUI Autocomplete, который с сервера будет получать комментарии для формирования виртуализированного списка элементов.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Список подгружается один раз при клике на Autocomplete. Показать визуально, что список загружается (можно замедлить для наглядности).
 
-Currently, two official plugins are available:
+После того, как список прогрузился вывести информацию в виде списка карточек, фон карточек сделать зеброй.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+При выборе комментария из списка, записать поле в значение поле name
 
-## Expanding the ESLint configuration
+Должен работать серверный поиск, при поиске должен выделяться найденный фрагмент цвета жирным.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Ширина контейнера, в котором находится список, до 700px.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Требования:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1.       За основу взять MUI Autocomplete https://mui.com/material-ui/react-autocomplete/
+
+2.       @reduxjs/toolkit для хранения списка комментариев и работы с запросами
+
+3.       Библиотека виртуализации списка - любая
+
+4.       В качестве API использовать JSON placeholder:
+
+https://jsonplaceholder.typicode.com/comments (список всех комментариев)
+
+https://jsonplaceholder.typicode.com/comments?q=laud («laud» пример поиска)
+
+5.       Иходники разместить в git`е.
